@@ -7,6 +7,7 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.11.6"
         classpath "org.grails.plugins:hibernate5:6.0.4"
+        classpath "gradle.plugin.fi.evident.gradle.beanstalk:gradle-beanstalk-plugin:0.0.7"
     }
 }
 
@@ -35,6 +36,19 @@ dependencyManagement {
 grails {
     plugins {
         compile project(":mod-sandbox")
+    }
+}
+
+beanstalk {
+    s3Endpoint = "s3-eu-central-1.amazonaws.com"
+    beanstalkEndpoint = "elasticbeanstalk.eu-central-1.amazonaws.com"
+    
+    deployments {
+        test {
+            war = "build/libs/web-sandbox-${version}.war"
+            application = 'grails3'
+            environment = 'Grails3-env'
+        }
     }
 }
 
