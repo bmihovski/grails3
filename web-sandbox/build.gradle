@@ -42,6 +42,7 @@ grails {
 }
 
 beanstalk {
+    profile = 'grails3'
     s3Endpoint = "s3-eu-central-1.amazonaws.com"
     beanstalkEndpoint = "elasticbeanstalk.eu-central-1.amazonaws.com"
     
