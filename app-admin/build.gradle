@@ -32,6 +32,12 @@ dependencyManagement {
     applyMavenExclusions false
 }
 
+grails {
+    plugins {
+        compile project(":mod-domain")
+    }
+}
+
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"

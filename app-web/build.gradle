@@ -39,6 +39,13 @@ dependencyManagement {
     applyMavenExclusions false
 }
 
+grails {
+    plugins {
+        compile project(":mod-domain")
+        compile project(":mod-mobile")
+    }
+}
+
 dependencies {
     assets "com.craigburke.angular:angular-template-asset-pipeline:2.3.0"
     assets "com.craigburke.angular:angular-annotate-asset-pipeline:2.4.0"
@@ -79,7 +86,9 @@ dependencies {
 
 bootRun {
     jvmArgs = ['-Dspring.output.ansi.enabled=always']
-}clientDependencies {
+}
+
+clientDependencies {
     npm {
         'angular'('1.5.x', into: 'angular') {
             include 'angular.js'
