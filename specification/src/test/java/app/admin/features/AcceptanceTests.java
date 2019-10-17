@@ -2,7 +2,7 @@ package app.admin.features;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import junit.runner.RunWith;
+import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features="src/test/resources/features")
@@ -10,3 +10,21 @@ import junit.runner.RunWith;
 public class AcceptanceTests {
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,5 @@
 /.gradle/
 /.nb-gradle/
 /app-web/node_modules/
+/specification/target/
+.DS_Store

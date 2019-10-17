@@ -8,8 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 @DefaultUrl("http://localhost:8080")
-public class adminLandingPage extends PageObject {
-    @FindBy(tagname = "h1")
+public class AdminLandingPage extends PageObject {
+    
+    @FindBy(tagName = "h1")
     public WebElement welcomeMessage;
     
     @WhenPageOpens
@@ -17,7 +18,20 @@ public class adminLandingPage extends PageObject {
         element(welcomeMessage).waitUntilVisible();
     }
     
-    public adminLandingPage(WebDriver driver) {
+    public AdminLandingPage(WebDriver driver) {
         super(driver);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

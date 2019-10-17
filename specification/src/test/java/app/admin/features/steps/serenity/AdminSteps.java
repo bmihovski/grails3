@@ -14,7 +14,7 @@ public class AdminSteps {
     }
     
     @Step
-    public void gotoFirstPage() {
+    public void goToFirstPage() {
         adminLandingPage.open();
     }
     
@@ -24,3 +24,10 @@ public class AdminSteps {
         assertThat(welcomeMessage).isEqualTo(message);
     }
 }
+
+
+
+
+
+
+
