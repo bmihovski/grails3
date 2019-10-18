@@ -51,7 +51,7 @@ tasks.withType(Test) {
     systemProperty 'webdriver.driver', System.getProperty('webdriver.driver', 'chrome')
 
 //    https://chromedriver.storage.googleapis.com/index.html?path=2.26/
-    systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', '/usr/local/bin/chromedriver 2')
+    systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', '/usr/local/bin/chromedriver')
     systemProperty 'tags', System.getProperty('tags', '')
 
     systemProperty 'serenity.logging', System.getProperty('serenity.logging', 'VERBOSE')
