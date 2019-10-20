@@ -12,16 +12,34 @@ public class AdminLandingPage extends PageObject {
     
     @FindBy(tagName = "h1")
     public WebElement welcomeMessage;
-    
+    /*
     @WhenPageOpens
     public void waitUntilTitleAppears() {
         element(welcomeMessage).waitUntilVisible();
     }
-    
+    */
     public AdminLandingPage(WebDriver driver) {
         super(driver);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,7 +11,7 @@ public class AdminLandingStepDefinitions {
     @Steps
     AdminSteps adminSteps;
     
-    @Given("I am an '(.*)' of the application")
+    @Given("I am a '(.*)' of the application")
     public void asAnAdministrator(String role) {
         adminSteps.logRole(role);
     }
@@ -26,3 +26,6 @@ public class AdminLandingStepDefinitions {
         adminSteps.verifyPageContent(message);
     }
 }
+
+
+
