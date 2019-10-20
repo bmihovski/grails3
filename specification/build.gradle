@@ -36,7 +36,7 @@ dependencies {
     compile "org.grails:grails-core"
     console "org.grails:grails-console"
     profile "org.grails.profiles:base"
-    
+
     compile 'org.slf4j:slf4j-api:1.7.5'
 
     testCompile 'junit:junit:4.12'
@@ -53,7 +53,6 @@ tasks.withType(Test) {
 //    https://chromedriver.storage.googleapis.com/index.html?path=2.26/
     systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', '/usr/local/bin/chromedriver')
     systemProperty 'tags', System.getProperty('tags', '')
-
     systemProperty 'serenity.logging', System.getProperty('serenity.logging', 'VERBOSE')
 }
 
