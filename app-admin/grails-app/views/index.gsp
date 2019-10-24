@@ -45,8 +45,8 @@
     </li>
     <li>
         <g:link controller="logoff">Logout</g:link>
-    </li>
-</content>
+        </li>
+    </content>
 
 <div class="svg" role="presentation">
     <div class="grails-logo-container">
@@ -62,16 +62,19 @@
             Congratulations <sec:loggedInUserInfo field="username"/>, you have successfully logged in Administration Application!
         </p> 
         <p>
-            <sec:ifAllGranted roles="ROLE_ADMIN">
-                You can manage the users and the jobs on this site!
-            </sec:ifAllGranted>
-            <sec:ifAllGranted roles="ROLE_OPERATOR">
-                You can manage the jobs on this site!
-            </sec:ifAllGranted>
-         </p>
+        <sec:ifAllGranted roles="ROLE_ADMIN">
+            You can manage the users and the jobs on this site!
+        </sec:ifAllGranted>
+        <sec:ifAllGranted roles="ROLE_OPERATOR">
+            You can manage the jobs on this site!
+        </sec:ifAllGranted>
+        </p>
+        <div><s:top type="publishers"/></div>
+        <div><s:top type="tags"/></div>
+        <div><s:top type="types"/></div>
         <p>
-        Below is a list of controllers that are currently deployed in
-        this application, click on each to execute its default action:
+            Below is a list of controllers that are currently deployed in
+            this application, click on each to execute its default action:
         </p>
 
         <div id="controllers" role="navigation">

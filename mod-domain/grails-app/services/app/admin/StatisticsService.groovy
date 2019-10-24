@@ -2,6 +2,8 @@ package app.admin
 
 import app.admin.jobsboard.Job
 import app.admin.jobsboard.Publisher
+import app.admin.jobsboard.Type
+import app.admin.jobsboard.Tag
 import grails.transaction.Transactional
 
 @Transactional
@@ -11,4 +13,12 @@ class StatisticsService {
         Job.list().countBy { it.publisher }
     }
 
+    def getTopTags() {
+        Job.list().countBy { it.tags }
+    }
+    
+    def getTopTypes() {
+        Job.list().countBy { it.type }
+    }
+    
 }

@@ -63,6 +63,7 @@ dependencies {
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
     
     testCompile "org.grails.plugins:build-test-data:3.0.1"
+    testCompile "org.assertj:assertj-core:3.0.0"
 
 }
 
