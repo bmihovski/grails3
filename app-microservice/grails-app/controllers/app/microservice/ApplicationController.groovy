@@ -1,7 +1,6 @@
 package app.microservice
 
 import grails.core.GrailsApplication
-import grails.util.Environment
 import grails.plugins.*
 
 class ApplicationController implements PluginManagerAware {

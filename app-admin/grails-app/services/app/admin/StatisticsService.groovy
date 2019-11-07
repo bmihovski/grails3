@@ -4,7 +4,7 @@ import app.admin.jobsboard.Job
 import app.admin.jobsboard.Publisher
 import app.admin.jobsboard.Type
 import app.admin.jobsboard.Tag
-import grails.transaction.Transactional
+import grails.gorm.transactions.Transactional
 
 @Transactional
 class StatisticsService {
