@@ -1,6 +1,6 @@
 package app.admin
 
-import grails.test.mixin.TestFor
+import grails.testing.web.taglib.TagLibUnitTest
 import spock.lang.Specification
 
 import app.admin.jobsboard.Job
@@ -8,17 +8,13 @@ import app.admin.jobsboard.Publisher
 import app.admin.jobsboard.Tag
 import app.admin.jobsboard.Type
 import grails.buildtestdata.mixin.Build
-import grails.test.mixin.Mock
+import grails.testing.gorm.DataTest
 
-/**
- * See the API for {@link grails.test.mixin.web.GroovyPageUnitTestMixin} for usage instructions
- */
-@TestFor(StatisticsTagLib)
-@Mock([Job, Tag])
 @Build([Job, Publisher, Tag, Type])
-class StatisticsTagLibSpec extends Specification {
+class StatisticsTagLibSpec extends Specification implements TagLibUnitTest<StatisticsTagLib>, DataTest {
 
     def setup() {
+        mockDomains Job, Tag   
     }
 
     def cleanup() {

@@ -5,20 +5,19 @@ import app.admin.jobsboard.Publisher
 import app.admin.jobsboard.Tag
 import app.admin.jobsboard.Type
 import grails.buildtestdata.mixin.Build
-import grails.test.mixin.TestFor
-import grails.test.mixin.Mock
+import grails.testing.gorm.DataTest
 import spock.lang.Specification
 import static org.assertj.core.api.Assertions.*
+import grails.testing.services.ServiceUnitTest
 
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
-@TestFor(StatisticsService)
-@Mock([Job, Tag])
 @Build([Job, Tag, Type, Publisher])
-class StatisticsServiceSpec extends Specification {
+class StatisticsServiceSpec extends Specification implements ServiceUnitTest<StatisticsService>, DataTest {
 
     def setup() {
+        mockDomains Job, Tag
     }
 
     def cleanup() {
