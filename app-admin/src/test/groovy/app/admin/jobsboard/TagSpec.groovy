@@ -2,8 +2,12 @@ package app.admin.jobsboard
 
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
+import spock.lang.Subject
 
 class TagSpec extends Specification implements DomainUnitTest<Tag> {
+    
+    @Subject
+    Tag domain
 
     def setup() {
     }
@@ -13,15 +17,15 @@ class TagSpec extends Specification implements DomainUnitTest<Tag> {
 
     void "completed tag creation"() {
         given: "a completely new tag"
-            def tag = new Tag(name: "Remote")
+            domain = new Tag(name: "Remote")
         expect: "we can save a complete job tag"
-            true == tag.validate()
+            domain.validate(['name'])
     }
     
     void "can't save tag without a name"() {
         given: "a job tag without a name"
-            def tag = new Tag(name: "")
+            domain = new Tag(name: "")
         expect: "we can't save the tag"
-            false == tag.validate()
+            domain.validate(['name'])
     }
 }
